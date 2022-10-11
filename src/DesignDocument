@@ -1,0 +1,58 @@
+LinearEquation class
+Instance variables:
+private int x1 - represents first x coordinate
+private int y1 = represents first y coordinate
+private int x2 = represents second x coordinate
+private int y2 = represents second y coordinate
+private int x3 = represents third x coordinate
+
+Constructor
+public LinearEquation(int x1, int y1, int x2, int y2)
+x1 = x1
+y1 = y1
+x2 = x2
+y2 = y2
+
+Methods
+public int slopeLine()
+calculates slope line
+
+public double calculateDistance()
+√((x2 – x1)² + (y2 – y1)²)
+calculate distance between two points
+
+public int calculateSlope()
+//(x2−x1) (x2 − x1)
+calculate slope between two points
+
+public int y-intercept()
+calculate y-intercept
+
+public double calculateY()
+substitute x3 in slope-intercept to find y
+
+public String calculateLinearEquation()
+//slope-intercept (y=(slope)x + y-intercept)
+calculate slope
+
+
+public String toString()
+Display
+- display two original points
+(x1,y1) and (x2,y2)
+-slope line
+slopeLine()
+-y-intercept
+yIntercept()
+-slope intercept form
+-distance between the two points
+calculateDistance()
+
+
+EquationRunner.java
+Scanner class
+Step 1: Ask user to enter first coordinate point
+Step 2: Ask user to enter second coordinate point
+Step 3: Display toString()
+Step 4: Ask user to enter an x-value
+Step 5: Display a (x,calculateY()) coordinate given the x-coordinate.
