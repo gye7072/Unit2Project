@@ -14,15 +14,13 @@ x2 = x2
 y2 = y2
 
 Methods
-public int slopeLine()
-calculates slope line
 
-public double calculateDistance()
+public double distance()
 √((x2 – x1)² + (y2 – y1)²)
 calculate distance between two points
 
-public int calculateSlope()
-//(x2−x1) (x2 − x1)
+public int slope()
+//(y2−y1)/(x2 − x1)
 calculate slope between two points
 
 public int y-intercept()
@@ -31,7 +29,7 @@ calculate y-intercept
 public double calculateY()
 substitute x3 in slope-intercept to find y
 
-public String calculateLinearEquation()
+public String linearEquation()
 //slope-intercept (y=(slope)x + y-intercept)
 calculate slope
 
