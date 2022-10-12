@@ -10,6 +10,7 @@ public class LinearEquation {
     private int y2;
 
     double x3;
+    double y3;
 
     //CONSTRUCTOR
     public LinearEquation(int x1, int y1, int x2, int y2) {
@@ -27,13 +28,13 @@ public class LinearEquation {
     }
 
     //calculates y-intercept
-    public int yIntercept() {
-        return (int) (y1 - slope() * x1);
+    public double yIntercept() {
+        return (y1 - slope() * x1);
     }
 
     //calculates slope-intercept form
     public String linearEquation() {
-        return (y2 - y1) + "/" + (x2 - x1) + "x" + " + " + yIntercept();
+        return (y2 - y1) + "/" + (x2 - x1) + "x" + " + " + df.format(yIntercept());
     }
 
     //calculates distance between two points
@@ -42,17 +43,19 @@ public class LinearEquation {
     }
 
     //calculates y coordinate given x coordinate
-    public double calculateY(double x3) {
+    public String calculateY(double x3) {
         this.x3 = x3;
-        return slope() * x3 + yIntercept();
+        double y3 = (slope() * x3 + yIntercept());
+        return "Solved coordinate point is: (" +  df.format(x3) + "," + df.format(y3) + ")";
+
     }
 
-    //displays string
+    //displays LinearEquation info
     public String toString() {
         String firstPair = "First pair: (" + x1 + "," + y1 + ")" + "\n";
         String secondPair = "Second pair: (" + x2 + "," + y2 + ")" + "\n";
-        String slopeOfLine = "Slope of Line: " + slope() + "\n";
-        String yIntercept = "Y-Intercept: " + yIntercept() + "\n";
+        String slopeOfLine = "Slope of Line: " + df.format(slope()) + "\n";
+        String yIntercept = "Y-Intercept: " + df.format(yIntercept()) + "\n";
         String linearEquation = "Slope Intercept Form: " + linearEquation() + "\n";
         String distance = "Distance between points: " + df.format(distance()) + "\n";
         return firstPair + secondPair + slopeOfLine + yIntercept + linearEquation + distance;
