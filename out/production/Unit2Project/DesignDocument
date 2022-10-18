@@ -33,6 +33,8 @@ public String linearEquation()
 //slope-intercept (y=(slope)x + y-intercept)
 calculate slope
 
+public String calculateY()
+calculate y coordinate given x coordinate
 
 public String toString()
 Display
